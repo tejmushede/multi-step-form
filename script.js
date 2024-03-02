@@ -3,6 +3,7 @@ let nextButton = document.querySelector(".next-button-desktop");
 let toggleSwitch = document.querySelector(".switch");
 let plans = document.querySelectorAll(".plan");
 let addOns = document.querySelectorAll(".add-on");
+let changeButton = document.querySelector(".change");
 let currentPage = 1;
 
 const planObject = {
@@ -191,3 +192,9 @@ function updateCheckout(planDetails){
   //console.log(planObject["name"]);
   //console.log(planDetails);
 }
+
+changeButton.addEventListener("click", () => {
+  document.querySelector(".page-four").style.display = "none";
+  currentPage = 2;
+  updatePage(currentPage);
+})
